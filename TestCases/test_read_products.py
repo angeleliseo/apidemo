@@ -1,7 +1,9 @@
 import pytest
-import requests, jsonpath
+import requests, jsonpath, json
 
-BASE_URL = "http://localhost:8000"
+file = open(r"./TestCases/TestData/env.json")
+payload = json.load(file)
+BASE_URL = payload["dev"]
 
 def test_canary_http_status():
   test_endpoint = f"{BASE_URL}/"

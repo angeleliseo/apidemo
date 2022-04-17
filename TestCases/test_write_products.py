@@ -1,7 +1,9 @@
 import pytest
 import requests, json
 
-BASE_URL = "http://localhost:8000"
+file = open(r"./TestCases/TestData/env.json")
+payload = json.load(file)
+BASE_URL = payload["qa"]
 #json file request
 file = open(r"./TestCases/TestData/add_product_request.json")
 payload = json.load(file)
