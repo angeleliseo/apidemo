@@ -4,3 +4,4 @@ __pycache__/
 .vscode/
 report.html/
 .pytest_cache/
+shell/

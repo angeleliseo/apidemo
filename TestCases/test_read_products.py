@@ -3,7 +3,7 @@ import requests, jsonpath, json
 
 file = open(r"./TestCases/TestData/env.json")
 payload = json.load(file)
-BASE_URL = payload["dev"]
+BASE_URL = payload["qa"]
 
 def test_canary_http_status():
   test_endpoint = f"{BASE_URL}/"
